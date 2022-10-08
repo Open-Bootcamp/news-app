@@ -3,7 +3,11 @@
 module.exports = {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
-    extend: {},
+    extend: {
+      gridTemplateColumns: {
+        'auto-fit': 'repeat(auto-fit, minmax(350px, 1fr))'
+      }
+    },
     plugins: [[require('prettier-plugin-tailwindcss')]]
   }
 }
