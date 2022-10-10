@@ -2,7 +2,7 @@ import React from 'react'
 
 const NewsCard = ({ image, title, description, url }) => {
   return (
-    <article className='mb-4 max-w-7xl border-b border-b-black-25 pb-4 md:m-4 md:border-b-0 '>
+    <article className='mb-4 max-w-7xl  border-b border-b-black-25 pb-4 md:m-4 md:border-b-0'>
       <a
         href={url}
         target='_blank'

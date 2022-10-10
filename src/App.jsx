@@ -50,9 +50,14 @@ function App() {
           element={<Technology />}
         />
         <Route
-          path='/search'
+          path='/search/:search'
           element={<Search />}
         />
+        <Route
+          path='/search/:search/:page'
+          element={<Search />}
+        />
+
         <Route
           path='*'
           element={<h1>Not Found</h1>}
