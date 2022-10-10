@@ -10,7 +10,7 @@ const PrincipalCard = ({ image, title, description, url }) => {
         className='h-full w-full'
       >
         <img
-          className='mb-4 h-auto w-full max-w-2xl md:mb-0  '
+          className='mb-4 h-auto w-full md:mb-0 md:w-auto  md:max-w-md lg:max-w-xl  '
           src={image}
           alt='News Image'
         />

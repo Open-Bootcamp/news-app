@@ -1,6 +1,8 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { useParams } from 'react-router-dom'
 import NewsCard from '../components/Cards/NewsCard'
+import NewsCardContainer from '../components/Cards/NewsCardContainer'
+import { PageTitle } from '../components/Cards/PageTitle'
 import PrincipalCard from '../components/Cards/PrincipalCard'
 import Loader from '../components/loader/Loader'
 import PaginationContainer from '../components/Pagination/PaginationContainer'
@@ -22,16 +24,14 @@ const Home = () => {
   return (
     <>
       <main className='m-4 font-lora  md:mx-auto md:w-11/12'>
-        <h3 className='mb-4 w-max bg-primary px-4 py-2 text-lg font-semibold text-white sm:text-xl md:ml-4 md:px-6  md:py-3 lg:px-8 lg:text-2xl'>
-          Trending
-        </h3>
+        <PageTitle>Trending</PageTitle>
         <PrincipalCard
           title={principalNew.title}
           description={principalNew.description}
           image={principalNew.image}
           url={principalNew.url}
         />
-        <section className='grid grid-cols-auto-fit md:border-y md:border-y-black-25 '>
+        <NewsCardContainer>
           {news.map(({ id, title, description, image, url }) => (
             <NewsCard
               key={id}
@@ -41,7 +41,7 @@ const Home = () => {
               url={url}
             />
           ))}
-        </section>
+        </NewsCardContainer>
       </main>
       <PaginationContainer
         data={data.meta}
