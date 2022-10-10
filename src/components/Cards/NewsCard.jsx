@@ -9,7 +9,7 @@ const NewsCard = ({ image, title, description, url }) => {
         rel='noopener noreferrer'
       >
         <img
-          className='mb-4 h-auto w-full max-w-2xl '
+          className='mb-4 w-full max-w-2xl md:h-1/2 md:object-cover  '
           src={image}
           alt='News Image'
         />
