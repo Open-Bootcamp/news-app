@@ -11,7 +11,7 @@ const CATEGORY = 'general'
 const Home = () => {
   let { page } = useParams()
   page ??= 1
-  const { data, loading } = useFetchNews(page)
+  const { data, loading } = useFetchNews({ page })
   let principalNew = [],
     news = []
   if (loading) return <Loader />
