@@ -31,7 +31,15 @@ function App() {
           element={<Business />}
         />
         <Route
+          path='/business/:page'
+          element={<Business />}
+        />
+        <Route
           path='/entertainment'
+          element={<Entertainment />}
+        />
+        <Route
+          path='/entertainment/:page'
           element={<Entertainment />}
         />
         <Route
@@ -39,7 +47,15 @@ function App() {
           element={<Health />}
         />
         <Route
+          path='/Health/:page'
+          element={<Health />}
+        />
+        <Route
           path='/science'
+          element={<Science />}
+        />
+        <Route
+          path='/science/:page'
           element={<Science />}
         />
         <Route
@@ -47,7 +63,15 @@ function App() {
           element={<Sports />}
         />
         <Route
+          path='/sports/:page'
+          element={<Sports />}
+        />
+        <Route
           path='/technology'
+          element={<Technology />}
+        />
+        <Route
+          path='/technology/:page'
           element={<Technology />}
         />
         <Route
