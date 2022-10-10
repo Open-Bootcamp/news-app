@@ -17,6 +17,15 @@ function App() {
           element={<Home />}
         />
         <Route
+          path='/general'
+          element={<Home />}
+        />
+        <Route
+          path='/general/:page'
+          element={<Home />}
+        />
+
+        <Route
           path='/business'
           element={<Business />}
         />

@@ -4,7 +4,7 @@ const DOCUMENTS_PER_PAGE = 13
 const API_URL = 'https://news-app-api.onrender.com/api/news'
 
 const createQuery = (category, page, search) => {
-  let query = `?documentsPerPage=${DOCUMENTS_PER_PAGE}&page=${page}`
+  let query = `?documentsPerPage=${DOCUMENTS_PER_PAGE}&currentPage=${page}`
   if (category) {
     query += `&category=${category}`
   }
@@ -14,11 +14,11 @@ const createQuery = (category, page, search) => {
   return query
 }
 
-export const useFetchNews = ({
-  category,
+export const useFetchNews = (
   page = 1,
-  search = null
-}) => {
+  category,
+  search = undefined
+) => {
   const [data, setData] = useState(null)
   const [loading, setLoading] = useState(true)
   const query = createQuery(category, page, search)
