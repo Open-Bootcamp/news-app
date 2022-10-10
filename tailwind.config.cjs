@@ -12,15 +12,18 @@ module.exports = {
         75: '#494848',
         50: '#868585',
         25: '#C2C2C2',
-        10: '#E7E7E7'
-      }
+        10: '#E7E7E7',
+      },
     },
     extend: {
       fontFamily: {
         lora: ['Lora', 'serif'],
-        notoSerif: ['Noto Serif', 'serif']
-      }
+        notoSerif: ['Noto Serif', 'serif'],
+      },
+      gridTemplateColumns: {
+        'auto-fit': 'repeat(auto-fit, minmax(350px, 1fr))',
+      },
     },
-    plugins: [[require('prettier-plugin-tailwindcss')]]
-  }
+    plugins: [[require('prettier-plugin-tailwindcss')]],
+  },
 }
