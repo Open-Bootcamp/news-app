@@ -1,4 +1,5 @@
 import { Route, Routes } from 'react-router-dom'
+import Footer from './components/Footer/Footer'
 import Business from './pages/Business'
 import Entertainment from './pages/Entertainment'
 import Health from './pages/Health'
@@ -63,6 +64,8 @@ function App() {
           element={<h1>Not Found</h1>}
         />
       </Routes>
+
+      <Footer />
     </>
   )
 }
