@@ -8,3 +8,9 @@
   box-sizing: border-box;
   font-family: 'Noto Serif', serif;
 }
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}

@@ -26,27 +26,25 @@ const Search = () => {
 
   return (
     <>
-      <main className='m-4 font-lora  md:mx-auto md:w-11/12'>
-        <PageTitle>Results: {search}</PageTitle>
+      <PageTitle>Results: {search}</PageTitle>
 
-        <NewsCardContainer>
-          {news.length === 0 ? (
-            <h1 className='my-4 text-center font-lora text-2xl'>
-              No results found
-            </h1>
-          ) : (
-            news.map(({ id, title, description, image, url }) => (
-              <NewsCard
-                key={id}
-                title={title}
-                description={description}
-                image={image}
-                url={url}
-              />
-            ))
-          )}
-        </NewsCardContainer>
-      </main>
+      <NewsCardContainer>
+        {news.length === 0 ? (
+          <h1 className='my-4 text-center font-lora text-2xl'>
+            No results found
+          </h1>
+        ) : (
+          news.map(({ id, title, description, image, url }) => (
+            <NewsCard
+              key={id}
+              title={title}
+              description={description}
+              image={image}
+              url={url}
+            />
+          ))
+        )}
+      </NewsCardContainer>
       <PaginationContainer
         data={data.meta}
         category={CATEGORY.concat(`/${search}`)}

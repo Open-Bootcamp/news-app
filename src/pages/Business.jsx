@@ -23,26 +23,24 @@ const Business = () => {
   }
   return (
     <>
-      <main className='m-4 font-lora  md:mx-auto md:w-11/12'>
-        <PageTitle>Trending</PageTitle>
-        <PrincipalCard
-          title={principalNew.title}
-          description={principalNew.description}
-          image={principalNew.image}
-          url={principalNew.url}
-        />
-        <NewsCardContainer>
-          {news.map(({ id, title, description, image, url }) => (
-            <NewsCard
-              key={id}
-              title={title}
-              description={description}
-              image={image}
-              url={url}
-            />
-          ))}
-        </NewsCardContainer>
-      </main>
+      <PageTitle>Trending</PageTitle>
+      <PrincipalCard
+        title={principalNew.title}
+        description={principalNew.description}
+        image={principalNew.image}
+        url={principalNew.url}
+      />
+      <NewsCardContainer>
+        {news.map(({ id, title, description, image, url }) => (
+          <NewsCard
+            key={id}
+            title={title}
+            description={description}
+            image={image}
+            url={url}
+          />
+        ))}
+      </NewsCardContainer>
       <PaginationContainer
         data={data.meta}
         category={CATEGORY}

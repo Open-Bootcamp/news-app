@@ -13,82 +13,84 @@ import Technology from './pages/Technology'
 function App() {
   return (
     <>
-      <Routes>
-        <Route
-          path='/'
-          element={<Home />}
-        />
-        <Route
-          path='/general'
-          element={<Home />}
-        />
-        <Route
-          path='/general/:page'
-          element={<Home />}
-        />
+      <main className='m-4 max-w-screen-3xl flex-1 font-lora md:mx-auto md:w-11/12 '>
+        <Routes>
+          <Route
+            path='/'
+            element={<Home />}
+          />
+          <Route
+            path='/general'
+            element={<Home />}
+          />
+          <Route
+            path='/general/:page'
+            element={<Home />}
+          />
 
-        <Route
-          path='/business'
-          element={<Business />}
-        />
-        <Route
-          path='/business/:page'
-          element={<Business />}
-        />
-        <Route
-          path='/entertainment'
-          element={<Entertainment />}
-        />
-        <Route
-          path='/entertainment/:page'
-          element={<Entertainment />}
-        />
-        <Route
-          path='/Health'
-          element={<Health />}
-        />
-        <Route
-          path='/Health/:page'
-          element={<Health />}
-        />
-        <Route
-          path='/science'
-          element={<Science />}
-        />
-        <Route
-          path='/science/:page'
-          element={<Science />}
-        />
-        <Route
-          path='/sports'
-          element={<Sports />}
-        />
-        <Route
-          path='/sports/:page'
-          element={<Sports />}
-        />
-        <Route
-          path='/technology'
-          element={<Technology />}
-        />
-        <Route
-          path='/technology/:page'
-          element={<Technology />}
-        />
-        <Route
-          path='/search/:search'
-          element={<Search />}
-        />
-        <Route
-          path='/search/:search/:page'
-          element={<Search />}
-        />
+          <Route
+            path='/business'
+            element={<Business />}
+          />
+          <Route
+            path='/business/:page'
+            element={<Business />}
+          />
+          <Route
+            path='/entertainment'
+            element={<Entertainment />}
+          />
+          <Route
+            path='/entertainment/:page'
+            element={<Entertainment />}
+          />
+          <Route
+            path='/Health'
+            element={<Health />}
+          />
+          <Route
+            path='/Health/:page'
+            element={<Health />}
+          />
+          <Route
+            path='/science'
+            element={<Science />}
+          />
+          <Route
+            path='/science/:page'
+            element={<Science />}
+          />
+          <Route
+            path='/sports'
+            element={<Sports />}
+          />
+          <Route
+            path='/sports/:page'
+            element={<Sports />}
+          />
+          <Route
+            path='/technology'
+            element={<Technology />}
+          />
+          <Route
+            path='/technology/:page'
+            element={<Technology />}
+          />
+          <Route
+            path='/search/:search'
+            element={<Search />}
+          />
+          <Route
+            path='/search/:search/:page'
+            element={<Search />}
+          />
 
-        <Route
-          path='*'
-          element={<NotFound />}
-        />
-      </Routes>
+          <Route
+            path='*'
+            element={<NotFound />}
+          />
+        </Routes>
+      </main>
 
       <Footer />
     </>
