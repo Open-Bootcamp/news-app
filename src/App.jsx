@@ -1,5 +1,6 @@
 import { Route, Routes } from 'react-router-dom'
 import Footer from './components/Footer/Footer'
+import { NavBar } from './components/NavBar/NavBar'
 import Business from './pages/Business'
 import Entertainment from './pages/Entertainment'
 import Health from './pages/Health'
@@ -13,7 +14,8 @@ import Technology from './pages/Technology'
 function App() {
   return (
     <>
-      <main className='m-4 max-w-screen-3xl flex-1 font-lora md:mx-auto md:w-11/12 '>
+      <NavBar />
+      <main className='m-4 max-w-screen-3xl flex-1 font-lora md:mx-auto md:w-11/12 '>        
         <Routes>
           <Route
             path='/'
@@ -94,7 +96,7 @@ function App() {
 
       <Footer />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
