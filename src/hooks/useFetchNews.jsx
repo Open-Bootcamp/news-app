@@ -3,8 +3,8 @@ import { useEffect, useState } from 'react'
 const DOCUMENTS_PER_PAGE = 13
 const API_URL = 'https://news-app-api.onrender.com/api/news'
 
-const createQuery = (category, page, search) => {
-  let query = `?documentsPerPage=${DOCUMENTS_PER_PAGE}&page=${page}`
+const createQuery = (category, page, search, documentsPerPage) => {
+  let query = `?documentsPerPage=${documentsPerPage}&currentPage=${page}`
   if (category) {
     query += `&category=${category}`
   }
@@ -15,13 +15,14 @@ const createQuery = (category, page, search) => {
 }
 
 export const useFetchNews = ({
-  category,
   page = 1,
-  search = null
+  category,
+  search = undefined,
+  documentsPerPage = DOCUMENTS_PER_PAGE
 }) => {
   const [data, setData] = useState(null)
   const [loading, setLoading] = useState(true)
-  const query = createQuery(category, page, search)
+  const query = createQuery(category, page, search, documentsPerPage)
 
   useEffect(() => {
     const fetchData = async () => {
