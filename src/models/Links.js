@@ -4,6 +4,6 @@ export const Links = [
   { name: "Entertainment", link: "/entertainment" },
   { name: "Health", link: "/health" },
   { name: "Science", link: "/science" },
-  { name: "Sport", link: "/sport" },
+  { name: "Sport", link: "/sports" },
   { name: "Technology", link: "/technology" },
 ];
