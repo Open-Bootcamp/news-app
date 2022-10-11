@@ -1,9 +1,9 @@
 export const Links = [
-  { name: 'General' },
-  { name: 'Business' },
-  { name: 'Entertainment' },
-  { name: 'Health' },
-  { name: 'Science' },
-  { name: 'Sport' },
-  { name: 'Technology' }
-]
+  { name: "General", link: "/general" },
+  { name: "Business", link: "/business" },
+  { name: "Entertainment", link: "/entertainment" },
+  { name: "Health", link: "/health" },
+  { name: "Science", link: "/science" },
+  { name: "Sport", link: "/sport" },
+  { name: "Technology", link: "/technology" },
+];

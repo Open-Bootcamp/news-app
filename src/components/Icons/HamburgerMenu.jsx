@@ -1,34 +1,19 @@
-import React from 'react'
+import React from "react";
 
 export const HamburgerMenu = () => {
   return (
     <svg
-      xmlns='http://www.w3.org/2000/svg'
-      viewBox='0 0 24 24'
-      stroke='currentColor'
-      strokeWidth='2'
-      strokeLinecap='round'
-      strokeLinejoin='round'
-      className='h-full w-full fill-white'
+      clipRule="evenodd"
+      fillRule="evenodd"
+      strokeLinejoin="round"
+      strokeMiterlimit="2"
+      viewBox="0 0 24 24"
+      className="h-full w-full fill-white"
     >
-      <line
-        x1='3'
-        y1='12'
-        x2='21'
-        y2='12'
-      ></line>
-      <line
-        x1='3'
-        y1='6'
-        x2='21'
-        y2='6'
-      ></line>
-      <line
-        x1='3'
-        y1='18'
-        x2='21'
-        y2='18'
-      ></line>
+      <path
+        d="m13 16.745c0-.414-.336-.75-.75-.75h-9.5c-.414 0-.75.336-.75.75s.336.75.75.75h9.5c.414 0 .75-.336.75-.75zm9-5c0-.414-.336-.75-.75-.75h-18.5c-.414 0-.75.336-.75.75s.336.75.75.75h18.5c.414 0 .75-.336.75-.75zm-4-5c0-.414-.336-.75-.75-.75h-14.5c-.414 0-.75.336-.75.75s.336.75.75.75h14.5c.414 0 .75-.336.75-.75z"
+        fillRule="nonzero"
+      />
     </svg>
-  )
-}
+  );
+};
