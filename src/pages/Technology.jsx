@@ -23,7 +23,7 @@ const Technology = () => {
   }
   return (
     <>
-      <main className='m-4 font-lora  md:mx-auto md:w-11/12'>
+      <main className='m-4 max-w-screen-3xl font-lora md:mx-auto md:w-11/12'>
         <PageTitle>Trending</PageTitle>
         <PrincipalCard
           title={principalNew.title}

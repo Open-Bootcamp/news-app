@@ -23,21 +23,28 @@ const Search = () => {
   if (!loading && data) {
     news = data.newsData
   }
+
   return (
     <>
       <main className='m-4 font-lora  md:mx-auto md:w-11/12'>
         <PageTitle>Results: {search}</PageTitle>
 
         <NewsCardContainer>
-          {news.map(({ id, title, description, image, url }) => (
-            <NewsCard
-              key={id}
-              title={title}
-              description={description}
-              image={image}
-              url={url}
-            />
-          ))}
+          {news.length === 0 ? (
+            <h1 className='my-4 text-center font-lora text-2xl'>
+              No results found
+            </h1>
+          ) : (
+            news.map(({ id, title, description, image, url }) => (
+              <NewsCard
+                key={id}
+                title={title}
+                description={description}
+                image={image}
+                url={url}
+              />
+            ))
+          )}
         </NewsCardContainer>
       </main>
       <PaginationContainer
