@@ -4,6 +4,7 @@ import Business from './pages/Business'
 import Entertainment from './pages/Entertainment'
 import Health from './pages/Health'
 import Home from './pages/Home'
+import NotFound from './pages/NotFound'
 import Science from './pages/Science'
 import Search from './pages/Search'
 import Sports from './pages/Sports'
@@ -85,7 +86,7 @@ function App() {
 
         <Route
           path='*'
-          element={<h1>Not Found</h1>}
+          element={<NotFound />}
         />
       </Routes>
 
