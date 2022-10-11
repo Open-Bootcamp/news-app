@@ -24,7 +24,7 @@ const socials = [
 
 export function Footer() {
   return (
-    <footer className='flex flex-col items-center justify-center gap-4 bg-primary p-8 text-white'>
+    <footer className='flex flex-col w-full items-center justify-center gap-4 bg-primary p-8 text-white'>
       <div className='flex gap-8'>
         {socials.map((social, index) => (
           <a

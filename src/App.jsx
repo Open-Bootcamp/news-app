@@ -15,7 +15,7 @@ function App() {
   return (
     <>
       <NavBar />
-      <main className='m-4 max-w-screen-3xl flex-1 font-lora md:mx-auto md:w-11/12 '>        
+      <main className=' m-4 flex max-w-screen-dk flex-1 flex-col font-lora md:mx-auto md:w-11/12 '>
         <Routes>
           <Route
             path='/'
@@ -96,7 +96,7 @@ function App() {
 
       <Footer />
     </>
-  );
+  )
 }
 
-export default App;
+export default App
