@@ -2,7 +2,7 @@ import React from 'react'
 
 const PrincipalCard = ({ image, title, description, url }) => {
   return (
-    <article className=' mb-4 max-w-7xl border-b border-b-black-25 py-4 md:mx-auto md:flex md:items-center md:gap-8 md:border-b-0 md:px-4'>
+    <article className=' mb-4 w-full border-b border-b-black-25 py-4 md:mx-auto md:flex md:items-center md:gap-8 md:border-b-0 md:px-4'>
       <a
         href={url}
         target='_blank'
@@ -10,7 +10,7 @@ const PrincipalCard = ({ image, title, description, url }) => {
         className='h-full w-full'
       >
         <img
-          className='mb-4 h-auto w-full md:mb-0 md:w-auto  md:max-w-md lg:max-w-xl  '
+          className='mb-4 h-full w-full object-cover md:mb-0 '
           src={image}
           alt='News Image'
         />

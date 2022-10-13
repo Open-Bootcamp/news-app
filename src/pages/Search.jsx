@@ -30,9 +30,9 @@ const Search = () => {
 
       <NewsCardContainer>
         {news.length === 0 ? (
-          <h1 className='my-4 text-center font-lora text-2xl'>
+          <h2 className='my-4 text-center font-lora text-4xl self-center'>
             No results found
-          </h1>
+          </h2>
         ) : (
           news.map(({ id, title, description, image, url }) => (
             <NewsCard
@@ -45,10 +45,12 @@ const Search = () => {
           ))
         )}
       </NewsCardContainer>
-      <PaginationContainer
-        data={data.meta}
-        category={CATEGORY.concat(`/${search}`)}
-      />
+      {news.length !== 0 && (
+        <PaginationContainer
+          data={data.meta}
+          category={CATEGORY.concat(`/${search}`)}
+        />
+      )}
     </>
   )
 }
