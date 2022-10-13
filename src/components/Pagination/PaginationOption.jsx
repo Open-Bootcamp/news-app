@@ -1,9 +1,13 @@
 import React from 'react'
 
-const PaginationOption = ({ children, handleClick }) => {
+const PaginationOption = ({
+  children,
+  handleClick,
+  className = ''
+}) => {
   return (
     <button
-      className=''
+      className={className}
       onClick={handleClick}
     >
       {children}

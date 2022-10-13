@@ -6,7 +6,7 @@ const PaginationNumber = ({ children, handleClick, isActive }) => {
     : 'bg-white text-black-50'
   return (
     <button
-      className={`duration-250 inline-flex h-10 w-10 items-center justify-center rounded-xl border border-primary p-4 text-xl  transition-colors ease-in-out hover:bg-primary hover:text-white ${active}`}
+      className={`duration-250 inline-flex h-10 w-10 items-center justify-center rounded-xl border border-primary p-4 text-base transition-colors ease-in-out hover:bg-primary hover:text-white md:text-xl ${active}`}
       onClick={handleClick}
     >
       {children}

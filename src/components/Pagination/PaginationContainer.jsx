@@ -11,7 +11,7 @@ const PaginationContainer = ({ data, category }) => {
   const navigate = useNavigate()
   const { currentPage, totalPages } = data
 
-  const handlePage = page => {
+  const handlePage = (page) => {
     if (page === currentPage) return
     if (page < 1 || page > totalPages) return
     if (page === 1) return navigate(`/${category}`)
@@ -37,17 +37,18 @@ const PaginationContainer = ({ data, category }) => {
   }
 
   return (
-    <section className=' my-4 flex w-full items-center justify-center gap-2'>
+    <section className='my-4 flex w-full items-center justify-center gap-2 overflow-hidden'>
       <PaginationOption handleClick={() => handlePage(1)}>
         <FirstPage />
       </PaginationOption>
       <PaginationOption
+        className='hidden sm:flex'
         handleClick={() => handlePage(currentPage - 1)}
       >
         <PreviousPage />
       </PaginationOption>
 
-      {pagination(currentPage, totalPages).map(page => (
+      {pagination(currentPage, totalPages).map((page) => (
         <PaginationNumber
           key={page}
           handleClick={() => handlePage(page)}
@@ -58,6 +59,7 @@ const PaginationContainer = ({ data, category }) => {
       ))}
 
       <PaginationOption
+        className='hidden sm:flex'
         handleClick={() => handlePage(currentPage + 1)}
       >
         <NextPage />
