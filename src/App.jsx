@@ -1,4 +1,4 @@
-import { Route, Routes } from 'react-router-dom'
+import { Navigate, Route, Routes } from 'react-router-dom'
 import Footer from './components/Footer/Footer'
 import { NavBar } from './components/NavBar/NavBar'
 import Business from './pages/Business'
@@ -15,11 +15,11 @@ function App() {
   return (
     <>
       <NavBar />
-      <main className=' m-4 flex max-w-screen-dk flex-1 flex-col font-lora md:mx-auto md:w-11/12 '>
+      <main className='m-4 flex max-w-screen-dk flex-1 flex-col font-lora md:mx-auto md:w-11/12 '>
         <Routes>
           <Route
             path='/'
-            element={<Home />}
+            element={<Navigate to='/general' />}
           />
           <Route
             path='/general'
