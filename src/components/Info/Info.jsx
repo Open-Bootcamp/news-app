@@ -14,7 +14,8 @@ export function Info() {
 
   const handleSearch = (e) => {
     e.preventDefault()
-    navigate(`/search/${e.target.search.value}`)
+    if (e.target.search.value.length > 0)
+      navigate(`/search/${e.target.search.value}`)
   }
 
   return (
